@@ -1,7 +1,7 @@
 from PIL import Image
 
 
-# size of pic
+
 def get_image_resize(img, height_new):
     width, height = img.size
     width_new = width // (height//height_new)
@@ -9,7 +9,7 @@ def get_image_resize(img, height_new):
     return img_new
 
 
-# pic symbols
+
 def get_image_symbols(img_new):
     width, height = img_new.size
     segment = 256 * 256 * 256 // len(symbols)
@@ -31,7 +31,7 @@ def get_image_symbols(img_new):
     
 
 
-# inverting sides
+
 def inverting_pic_sides(result):
     with open(f'output_ascii.txt', mode='w', encoding='utf8') as out:
         if inverting_ch == 1:
